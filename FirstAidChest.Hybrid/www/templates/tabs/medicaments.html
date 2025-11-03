@@ -1,0 +1,18 @@
+<ion-view view-title="İlaçlar">
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="İlaç Ara..." ng-change="searchMedicament()" ng-model="form.searchingItem" ng-model-options="{debounce:1000}">
+        </label>
+      </ion-item>
+      <ion-item ng-repeat="item in medicaments" class="item-button-right" ng-click="medicamentAction()">
+          {{item.Name}}
+          <button class="button button-positive">
+              <i class="icon ion-ios-telephone"></i>
+          </button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
